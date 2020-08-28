@@ -1,0 +1,10 @@
+[main]
+host = https://www.transifex.com
+
+[noscript.noscriptproperties]
+file_filter = locale/<lang>/noscript.properties
+minimum_perc = 99
+source_file = locale/en-US/noscript.properties
+source_lang = en_US
+type = MOZILLAPROPERTIES
+
