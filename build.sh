@@ -20,6 +20,9 @@ perl -pi -e 's/("version",\s*\["|<label.*(?:Version\s+|changelog#))'"$VER_RX"'/$
 perl -pi -e 's/(<!ENTITY\s*noscriptAbout\s*".*?)'"$VER_RX"'/${1}'"$VER"'/' \
    "$SRC"/chrome/locale/*/noscript/noscript.dtd
 
+# Update copyright/license information
+cp -uf COPYING "$SRC/chrome/content/noscript/NoScript_License.txt"
+
 # Let's package
 mkdir -p "$XPI"
 pushd >/dev/null 2>&1 "$SRC"
